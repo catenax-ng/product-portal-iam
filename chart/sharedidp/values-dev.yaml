@@ -2,16 +2,14 @@
 ## ref: https://github.com/bitnami/bitnami-docker-keycloak#admin-credentials
 ##
 auth:
-  secret:
-    path: "portal/data/dev/iam/sharedidp-keycloak"
-  secret2:
-    path: "portal/data/dev/iam/cx-test-access-users"
-  secret3:
-    path: "portal/data/dev/iam/sharedidp-service-accounts"
+  existingSecretPath: "portal/data/dev/iam/sharedidp-keycloak"
 
 ## Keycloak ingress parameters
 ## ref: https://kubernetes.io/docs/user-guide/ingress/
 ##
+
+extraVolumeSecretPath: portal/data/dev/iam/sharedidp-realms
+
 ingress:
   ## @param ingress.hostname Default host for the ingress record
   hostname: sharedidp.dev.demo.catena-x.net
@@ -33,5 +31,5 @@ ingress:
 
 postgresql:
   secret:
-    name: "sharedidp-postgres"
-    path: "portal/data/dev/iam/sharedidp-postgres"
+    name: sharedidp-postgres
+    path: portal/data/dev/iam/sharedidp-postgres

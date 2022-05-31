@@ -634,7 +634,7 @@
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
-      "secret": "${env.SA_CL1_REG_1}",
+      "secret": "**********",
       "redirectUris": [
         "*"
       ],

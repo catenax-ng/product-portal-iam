@@ -120,10 +120,8 @@ auth:
   ##     tls-keystore-password: myTlsKeystorePasswordKey
   ##     tls-truestore-password: myTlsTruestorePasswordKey
   ##
-  existingSecret: "sharedidp-keycloak"
-  secret:
-    name: "sharedidp-keycloak"
-    path: "portal/data/int/iam/sharedidp-keycloak"
+  existingSecret: sharedidp-keycloak
+  existingSecretPath: "portal/data/int/iam/sharedidp-keycloak"
   ## @param auth.existingSecretPerPassword Override `existingSecret` and other secret values
   ## e.g:
   ## existingSecretPerPassword:
@@ -303,7 +301,7 @@ extraEnvVars:
         name: sharedidp-keycloak
         key: admin-password
   - name: KEYCLOAK_DATABASE_HOST
-    value: "sharedidp-postgresql-primary"
+    value: sharedidp-postgresql-primary
   - name: CACHE_OWNERS_COUNT
     value: "3"
   - name: CACHE_OWNERS_AUTH_SESSIONS_COUNT
@@ -315,7 +313,7 @@ extraEnvVars:
 extraEnvVarsCM: ""
 ## @param extraEnvVarsSecret Name of existing Secret containing extra env vars
 ##
-extraEnvVarsSecret: "sharedidp-service-accounts"
+extraEnvVarsSecret: ""
 
 ## @section Keycloak statefulset parameters
 
@@ -535,8 +533,9 @@ extraVolumes:
     emptyDir: {}
   - name: realm-secrets
     secret:
-      secretName: secret-sharedidp-users
-      defaultMode: 0700
+      secretName: secret-sharedidp-realms
+extraVolumeSecret:
+extraVolumeSecretPath: portal/data/int/iam/sharedidp-realms
 ## @param extraVolumeMounts Optionally specify extra list of additional volumeMounts for Keycloak container(s)
 ##
 extraVolumeMounts:
@@ -571,14 +570,7 @@ initContainers:
         cp -R /import/catenax-shared/realms/* /realms
         echo "Copying realms-secrets..."
         cp /secrets/* /realms
-        echo "Realm..."
-        ls -lisa /realms
-        echo "Secret..."
-        ls -lisa /secrets
-        echo "cat Realm secret..."
-        cat /realms/CX-Test-Access-users-0.json
-        echo "cat Secret..."
-        cat /secrets/CX-Test-Access-users-0.json
+        echo "/realms..."
     volumeMounts:
     - name: themes
       mountPath: "/themes"
@@ -1052,10 +1044,9 @@ postgresql:
   auth:
     username: kcshared
     database: iamshared
-    existingSecret: "sharedidp-postgres"
+    existingSecret: sharedidp-postgres
     secret:
-      name: "sharedidp-postgres"
-      path: "portal/data/int/iam/sharedidp-postgres"
+      path: portal/data/int/iam/sharedidp-postgres
   architecture: replication
   primary:
     initdb:
