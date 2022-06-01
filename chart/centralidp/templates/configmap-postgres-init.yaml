@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: postgres-init-centralidp-sql
-data:
-{{ (.Files.Glob "files/docker-entrypoint-initdb.d/*").AsConfig | indent 2 }}

@@ -2,12 +2,14 @@
 ## ref: https://github.com/bitnami/bitnami-docker-keycloak#admin-credentials
 ##
 auth:
-  secret:
-    path: "portal/data/dev/iam/centralidp-keycloak"
+  existingSecretPath: "portal/data/dev/iam/centralidp-keycloak"
 
 ## Keycloak ingress parameters
 ## ref: https://kubernetes.io/docs/user-guide/ingress/
 ##
+
+extraVolumeSecretPath: portal/data/dev/iam/centralidp-realms
+
 ingress:
   ## @param ingress.hostname Default host for the ingress record
   hostname: centralidp.dev.demo.catena-x.net
@@ -29,5 +31,5 @@ ingress:
 
 postgresql:
   secret:
-    name: "centralidp-postgres"
-    path: "portal/data/dev/iam/centralidp-postgres"
+    name: centralidp-postgres
+    path: portal/data/dev/iam/centralidp-postgres

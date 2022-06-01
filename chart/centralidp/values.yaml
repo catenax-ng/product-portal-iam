@@ -85,9 +85,6 @@ image:
   ## pullSecrets:
   ##   - myRegistryKeySecretName
   ##
-  ## TODO: Configure Secret Name for Docker Registry in case of it being in a different account
-  ## pullSecrets:
-  ##  - centralidp
   ## Set to true if you would like to see extra information on logs
   ##
   debug: false
@@ -120,10 +117,8 @@ auth:
   ##     tls-keystore-password: myTlsKeystorePasswordKey
   ##     tls-truestore-password: myTlsTruestorePasswordKey
   ##
-  existingSecret: "centralidp-keycloak"
-  secret:
-    name: "centralidp-keycloak"
-    path: "portal/data/int/iam/centralidp-keycloak"
+  existingSecret: centralidp-keycloak
+  existingSecretPath: "portal/data/int/iam/centralidp-keycloak"
   ## @param auth.existingSecretPerPassword Override `existingSecret` and other secret values
   ## e.g:
   ## existingSecretPerPassword:
@@ -303,7 +298,7 @@ extraEnvVars:
         name: centralidp-keycloak
         key: admin-password
   - name: KEYCLOAK_DATABASE_HOST
-    value: "centralidp-postgresql-primary"
+    value: centralidp-postgresql-primary
   - name: CACHE_OWNERS_COUNT
     value: "3"
   - name: CACHE_OWNERS_AUTH_SESSIONS_COUNT
@@ -533,6 +528,11 @@ extraVolumes:
     emptyDir: {}
   - name: realms
     emptyDir: {}
+  - name: realm-secrets
+    secret:
+      secretName: secret-centralidp-realms
+extraVolumeSecret:
+extraVolumeSecretPath: portal/data/int/iam/centralidp-realms
 ## @param extraVolumeMounts Optionally specify extra list of additional volumeMounts for Keycloak container(s)
 ##
 extraVolumeMounts:
@@ -540,7 +540,8 @@ extraVolumeMounts:
     mountPath: "/opt/bitnami/keycloak/themes"
   - name: realms
     mountPath: "/realms"
-    readOnly: true
+  - name: realm-secrets
+    mountPath: "/secrets"
 ## @param initContainers Add additional init containers to the Keycloak pods
 ## Example:
 ## initContainers:
@@ -564,11 +565,15 @@ initContainers:
         cp -R /import/themes/* /themes
         echo "Copying realms..."
         cp -R /import/catenax-central/realms/* /realms
+        echo "Copying realms-secrets..."
+        cp /secrets/* /realms
     volumeMounts:
     - name: themes
       mountPath: "/themes"
     - name: realms
       mountPath: "/realms"
+    - name: realm-secrets
+      mountPath: "/secrets"
 ## @param sidecars Add additional sidecar containers to the Keycloak pods
 ## Example:
 ## sidecars:
@@ -1034,15 +1039,11 @@ postgresql:
   enabled: true
   auth:
     username: kccentral
-    database: iamcentral
-    existingSecret: "centralidp-postgres"
+    database: iamcentralidp
+    existingSecret: centralidp-postgres
     secret:
-      name: "centralidp-postgres"
-      path: "portal/data/int/iam/centralidp-postgres"
+      path: portal/data/int/iam/centralidp-postgres
   architecture: replication
-  primary:
-    initdb:
-      scriptsConfigMap: postgres-init-centralidp-sql
 ## External PostgreSQL configuration
 ## All of these values are only used when postgresql.enabled is set to false
 ## @param externalDatabase.host Database host
