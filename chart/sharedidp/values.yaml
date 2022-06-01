@@ -1042,14 +1042,11 @@ postgresql:
   enabled: true
   auth:
     username: kcshared
-    database: iamshared
+    database: iamsharedidp
     existingSecret: sharedidp-postgres
     secret:
       path: portal/data/int/iam/sharedidp-postgres
   architecture: replication
-  primary:
-    initdb:
-      scriptsConfigMap: postgres-init-sharedidp-sql
 ## External PostgreSQL configuration
 ## All of these values are only used when postgresql.enabled is set to false
 ## @param externalDatabase.host Database host
