@@ -554,7 +554,7 @@ extraVolumeMounts:
 ##
 initContainers:
   - name: import
-    image: ghcr.io/catenax-ng/product-portal-iam_iam-import:latest
+    image: ghcr.io/catenax-ng/product-portal-iam_iam-import-int:latest
     imagePullPolicy: Always
     command:
       - sh

@@ -10,6 +10,39 @@ auth:
 
 extraVolumeSecretPath: portal/data/dev/iam/centralidp-realms
 
+## @param initContainers Add additional init containers to the Keycloak pods
+## Example:
+## initContainers:
+##   - name: your-image-name
+##     image: your-image
+##     imagePullPolicy: Always
+##     ports:
+##       - name: portname
+##         containerPort: 1234
+##
+initContainers:
+  - name: import
+    image: ghcr.io/catenax-ng/product-portal-iam_iam-import-dev:latest
+    imagePullPolicy: Always
+    command:
+      - sh
+    args:
+      - -c
+      - |
+        echo "Copying themes..."
+        cp -R /import/themes/* /themes
+        echo "Copying realms..."
+        cp -R /import/catenax-central/realms/* /realms
+        echo "Copying realms-secrets..."
+        cp /secrets/* /realms
+    volumeMounts:
+    - name: themes
+      mountPath: "/themes"
+    - name: realms
+      mountPath: "/realms"
+    - name: realm-secrets
+      mountPath: "/secrets"
+
 ingress:
   ## @param ingress.hostname Default host for the ingress record
   hostname: centralidp.dev.demo.catena-x.net
@@ -30,6 +63,6 @@ ingress:
 ## @param postgresql.architecture PostgreSQL architecture (`standalone` or `replication`)
 
 postgresql:
-  secret:
-    name: centralidp-postgres
-    path: portal/data/dev/iam/centralidp-postgres
+  auth:
+    secret:
+      path: portal/data/dev/iam/centralidp-postgres
