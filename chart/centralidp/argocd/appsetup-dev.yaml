@@ -9,7 +9,7 @@ spec:
   source:
     path: chart/centralidp
     repoURL: 'https://github.com/catenax-ng/product-portal-iam.git'
-    targetRevision: 'feature/CPLP-768_keycloak-backend-frontend-integration'
+    targetRevision: HEAD
     plugin:
       name: argocd-vault-plugin-helm-args
       env:
