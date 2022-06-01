@@ -8,7 +8,7 @@ auth:
 ## ref: https://kubernetes.io/docs/user-guide/ingress/
 ##
 
-extraVolumeSecretPath: portal/data/dev/iam/centralidp-realms2
+extraVolumeSecretPath: portal/data/dev/iam/centralidp-realm-master
 
 ## @param initContainers Add additional init containers to the Keycloak pods
 ## Example:
