@@ -1,7 +1,7 @@
 {
     "id": "master",
     "realm": "master",
-    "displayName": "INT Central Identity Provider",
+    "displayName": "DEV Central Identity Provider",
     "displayNameHtml": "<div class=\"kc-logo-text\"><span>Keycloak</span></div>",
     "notBefore": 0,
     "defaultSignatureAlgorithm": "RS256",
