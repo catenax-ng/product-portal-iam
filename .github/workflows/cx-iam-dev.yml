@@ -13,8 +13,7 @@ on:
       - 'import/realm-config/dev/**'
 
     branches:
-     - main
-     - feature/CPLP-973-integrate-kc-exports-2
+     - 'main'
   workflow_dispatch:
 
 jobs:
