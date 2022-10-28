@@ -4,7 +4,7 @@
   "displayName": "CX-Operator",
   "notBefore": 1660280763,
   "defaultSignatureAlgorithm": "RS256",
-  "revokeRefreshToken": true,
+  "revokeRefreshToken": false,
   "refreshTokenMaxReuse": 1,
   "accessTokenLifespan": 300,
   "accessTokenLifespanForImplicitFlow": 900,
