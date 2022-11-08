@@ -402,5 +402,95 @@
     },
     "notBefore" : 0,
     "groups" : [ ]
+  }, {
+    "id" : "e193b73c-f4ec-46c2-b686-5c77fe49135e",
+    "createdTimestamp" : 1651814956235,
+    "username" : "cx-test-access.3d0f5663-2de1-4a08-a394-22d1d4248efc",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "Tester",
+    "lastName" : "PartChain One",
+    "email" : "partchain.one@cx.de",
+    "attributes" : {
+      "bpn" : [ "BPNL00000003CML1" ],
+      "organisation" : [ "CX-Test-Access" ],
+      "tenant" : [ "CX-Test-Access" ]
+    },
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "federatedIdentities" : [ {
+      "identityProvider" : "CX-Test-Access",
+      "userId" : "3d0f5663-2de1-4a08-a394-22d1d4248efc",
+      "userName" : "partchain.one@cx.de"
+    } ],
+    "realmRoles" : [ "default-roles-catena-x realm" ],
+    "clientRoles" : {
+      "Cl17-CX-Part" : [ "User" ],
+      "Cl2-CX-Portal" : [ "CX User" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "def0d51e-0a78-4774-ab51-b19a0cbe9d94",
+    "createdTimestamp" : 1651814956235,
+    "username" : "cx-test-access.f3d5e0c6-bb7b-4bb2-963f-3daffc90328d",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "Tester",
+    "lastName" : "PartChain Two",
+    "email" : "partchain.two@cx.de",
+    "attributes" : {
+      "bpn" : [ "BPNL00000003CML1" ],
+      "organisation" : [ "CX-Test-Access" ],
+      "tenant" : [ "CX-Test-Access" ]
+    },
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "federatedIdentities" : [ {
+      "identityProvider" : "CX-Test-Access",
+      "userId" : "f3d5e0c6-bb7b-4bb2-963f-3daffc90328d",
+      "userName" : "partchain.two@cx.de"
+    } ],
+    "realmRoles" : [ "default-roles-catena-x realm" ],
+    "clientRoles" : {
+      "Cl17-CX-Part" : [ "Supervisor" ],
+      "Cl2-CX-Portal" : [ "CX User" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "2772f485-b0e8-4fab-b5a8-3ed517c5c766",
+    "createdTimestamp" : 1651814956235,
+    "username" : "cx-test-access.311963ed-9c58-44a6-8103-0b689cebaeaa",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "Tester",
+    "lastName" : "PartChain Three",
+    "email" : "partchain.three@cx.de",
+    "attributes" : {
+      "bpn" : [ "BPNL00000003CML1" ],
+      "organisation" : [ "CX-Test-Access" ],
+      "tenant" : [ "CX-Test-Access" ]
+    },
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "federatedIdentities" : [ {
+      "identityProvider" : "CX-Test-Access",
+      "userId" : "311963ed-9c58-44a6-8103-0b689cebaeaa",
+      "userName" : "partchain.three@cx.de"
+    } ],
+    "realmRoles" : [ "default-roles-catena-x realm" ],
+    "clientRoles" : {
+      "Cl17-CX-Part" : [ "Admin" ],
+      "Cl2-CX-Portal" : [ "CX User" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
   }]
 }
