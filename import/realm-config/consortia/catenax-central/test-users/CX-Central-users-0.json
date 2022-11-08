@@ -492,5 +492,89 @@
     },
     "notBefore" : 0,
     "groups" : [ ]
+  }, {
+    "id" : "8be5ee49-4b9c-4008-b641-138305430cc4",
+    "createdTimestamp" : 1651814956235,
+    "username" : "idp4.3de6ccab-a04b-424f-ae9e-476e61fb436b",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "Test User",
+    "lastName" : "Service Provider",
+    "email" : "service-provider@cx.com",
+    "attributes" : {
+      "organisation" : [ "Service-Provider" ],
+      "tenant" : [ "idp4" ]
+    },
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "federatedIdentities" : [ {
+      "identityProvider" : "idp4",
+      "userId" : "3de6ccab-a04b-424f-ae9e-476e61fb436b",
+      "userName" : "service-provider@cx.com"
+    } ],
+    "realmRoles" : [ "default-roles-catena-x realm" ],
+    "clientRoles" : {
+      "Cl2-CX-Portal" : [ "CX Admin" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "6529834b-a4c1-4b11-a200-d77e5fe7443f",
+    "createdTimestamp" : 1651814956235,
+    "username" : "idp5.aa4b2a5d-2dc7-419c-a8ce-72886e0e32e9",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "Tester",
+    "lastName" : "App Provider",
+    "email" : "app-provider@cx.com",
+    "attributes" : {
+      "organisation" : [ "App-Provider" ],
+      "tenant" : [ "idp5" ]
+    },
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "federatedIdentities" : [ {
+      "identityProvider" : "idp5",
+      "userId" : "aa4b2a5d-2dc7-419c-a8ce-72886e0e32e9",
+      "userName" : "app-provider@cx.com"
+    } ],
+    "realmRoles" : [ "default-roles-catena-x realm" ],
+    "clientRoles" : {
+      "Cl2-CX-Portal" : [ "CX Admin" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "502dabcf-01c7-47d9-a88e-0be4279097b5",
+    "createdTimestamp" : 1651814956235,
+    "username" : "idp6.656e8a94-188b-4a3e-9eec-b45d8efd8347",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "Tester",
+    "lastName" : "CX Operator",
+    "email" : "cx-operator@cx.com",
+    "attributes" : {
+      "organisation" : [ "CX-Operator" ],
+      "tenant" : [ "idp6" ]
+    },
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "federatedIdentities" : [ {
+      "identityProvider" : "idp6",
+      "userId" : "311963ed-9c58-44a6-8103-0b689cebaeaa",
+      "userName" : "cx-operator@cx.com"
+    } ],
+    "realmRoles" : [ "default-roles-catena-x realm" ],
+    "clientRoles" : {
+      "Cl2-CX-Portal" : [ "CX Admin" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
   }]
 }
