@@ -503,6 +503,7 @@
     "lastName" : "Service Provider",
     "email" : "service-provider@cx.com",
     "attributes" : {
+      "bpn" : [ "BPNL07800HZ01643" ],
       "organisation" : [ "Service-Provider" ],
       "tenant" : [ "idp4" ]
     },
@@ -516,7 +517,7 @@
     } ],
     "realmRoles" : [ "default-roles-catena-x realm" ],
     "clientRoles" : {
-      "Cl2-CX-Portal" : [ "CX Admin" ]
+      "Cl2-CX-Portal" : [ "Company Admin" ]
     },
     "notBefore" : 0,
     "groups" : [ ]
@@ -531,6 +532,7 @@
     "lastName" : "App Provider",
     "email" : "app-provider@cx.com",
     "attributes" : {
+      "bpn" : [ "BPNL00000003CSLL" ],
       "organisation" : [ "App-Provider" ],
       "tenant" : [ "idp5" ]
     },
@@ -544,7 +546,7 @@
     } ],
     "realmRoles" : [ "default-roles-catena-x realm" ],
     "clientRoles" : {
-      "Cl2-CX-Portal" : [ "CX Admin" ]
+      "Cl2-CX-Portal" : [ "Company Admin" ]
     },
     "notBefore" : 0,
     "groups" : [ ]
@@ -559,6 +561,7 @@
     "lastName" : "CX Operator",
     "email" : "cx-operator@cx.com",
     "attributes" : {
+      "bpn" : [ "BPNL00000003CRHL" ],
       "organisation" : [ "CX-Operator" ],
       "tenant" : [ "idp6" ]
     },
