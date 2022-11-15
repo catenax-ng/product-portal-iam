@@ -26,7 +26,8 @@
     "realmRoles" : [ "default-roles-catena-x realm" ],
     "clientRoles" : {
       "Cl1-CX-Registration" : [ "CX Admin", "Company Admin" ],
-      "Cl2-CX-Portal" : [ "CX User" ]
+      "Cl2-CX-Portal" : [ "CX User" ],
+      "Cl15-CX-DFT" : [ "User" ]
     },
     "notBefore" : 0,
     "groups" : [ ]
@@ -495,7 +496,7 @@
   }, {
     "id" : "8be5ee49-4b9c-4008-b641-138305430cc4",
     "createdTimestamp" : 1651814956235,
-    "username" : "idp4.3de6ccab-a04b-424f-ae9e-476e61fb436b",
+    "username" : "idp4.dc438ad3-8bcf-49cc-beb0-437be2745720",
     "enabled" : true,
     "totp" : false,
     "emailVerified" : false,
@@ -512,7 +513,7 @@
     "requiredActions" : [ ],
     "federatedIdentities" : [ {
       "identityProvider" : "idp4",
-      "userId" : "3de6ccab-a04b-424f-ae9e-476e61fb436b",
+      "userId" : "dc438ad3-8bcf-49cc-beb0-437be2745720",
       "userName" : "service-provider@cx.com"
     } ],
     "realmRoles" : [ "default-roles-catena-x realm" ],
@@ -570,7 +571,7 @@
     "requiredActions" : [ ],
     "federatedIdentities" : [ {
       "identityProvider" : "idp6",
-      "userId" : "311963ed-9c58-44a6-8103-0b689cebaeaa",
+      "userId" : "656e8a94-188b-4a3e-9eec-b45d8efd8347",
       "userName" : "cx-operator@cx.com"
     } ],
     "realmRoles" : [ "default-roles-catena-x realm" ],
