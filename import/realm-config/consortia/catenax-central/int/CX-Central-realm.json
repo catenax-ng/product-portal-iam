@@ -199,6 +199,15 @@
           "attributes": {}
         },
         {
+          "id": "1290996a-0229-49b8-8aa4-732f4d27f5fa",
+          "name": "view_company_data",
+          "description": "view_company_data",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e0806293-f9b3-44f1-a6d0-4e4406787f80",
+          "attributes": {}
+        },
+        {
           "id": "27521792-5070-4dd9-93ed-d4fea69877e2",
           "name": "view_app_language",
           "description": "View available app language",
@@ -223,7 +232,6 @@
           "composites": {
             "client": {
               "Cl2-CX-Portal": [
-                "add_app",
                 "view_app_language",
                 "technical_roles_management",
                 "CX User",
@@ -300,18 +308,18 @@
           "attributes": {}
         },
         {
-          "id": "146c2388-2e26-4505-b85d-6824a4f80a2e",
-          "name": "add_tech_user_management",
-          "description": "Create / request technical users for my org",
+          "id": "0cf91728-4ab6-413c-af72-4d8aee959c51",
+          "name": "add_apps",
+          "description": "Users with this role can publish new apps in the Marketplace",
           "composite": false,
           "clientRole": true,
           "containerId": "e0806293-f9b3-44f1-a6d0-4e4406787f80",
           "attributes": {}
         },
         {
-          "id": "d5972ffe-2557-4143-8701-a08754b1eb38",
-          "name": "add_app",
-          "description": "Users with this role can publish new apps in the Marketplace",
+          "id": "146c2388-2e26-4505-b85d-6824a4f80a2e",
+          "name": "add_tech_user_management",
+          "description": "Create / request technical users for my org",
           "composite": false,
           "clientRole": true,
           "containerId": "e0806293-f9b3-44f1-a6d0-4e4406787f80",
@@ -482,13 +490,17 @@
                 "view_technical_setup",
                 "view_tech_user_management",
                 "add_user_account",
+                "view_company_data",
                 "modify_user_account",
                 "disable_idp",
+                "view_own_user_account",
                 "view_user_management",
                 "view_idp",
                 "add_tech_user_management",
                 "add_idp",
                 "delete_idp",
+                "view_membership",
+                "update_own_user_account",
                 "add_self_descriptions",
                 "view_user_account",
                 "setup_idp",
@@ -559,6 +571,7 @@
                 "view_app_subscription",
                 "delete_documents",
                 "app_management",
+                "view_company_data",
                 "view_app_language",
                 "modify_user_account",
                 "add_connectors",
@@ -566,7 +579,6 @@
                 "view_user_management",
                 "view_idp",
                 "add_tech_user_management",
-                "add_app",
                 "subscribe_service_offering",
                 "update_own_user_account",
                 "add_self_descriptions",
@@ -591,6 +603,7 @@
                 "view_services",
                 "add_idp",
                 "delete_idp",
+                "view_membership",
                 "view_dataspaces",
                 "add_service_offering",
                 "filter_apps",
@@ -620,9 +633,11 @@
               ],
               "Cl2-CX-Portal": [
                 "view_documents",
+                "view_membership",
                 "view_dataspaces",
                 "update_own_user_account",
                 "filter_apps",
+                "view_company_data",
                 "view_notifications",
                 "view_service_marketplace",
                 "view_service_offering",
@@ -669,9 +684,10 @@
           "composites": {
             "client": {
               "Cl2-CX-Portal": [
+                "add_apps",
                 "CX User",
-                "add_user_account",
                 "App Developer",
+                "add_user_account",
                 "edit_apps",
                 "activate_subscription",
                 "delete_apps",
@@ -731,6 +747,15 @@
           "id": "c190da2a-aad4-4a02-9904-88207ba322a6",
           "name": "delete_idp",
           "description": "User can delete company idps",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e0806293-f9b3-44f1-a6d0-4e4406787f80",
+          "attributes": {}
+        },
+        {
+          "id": "8cebb227-d72c-428e-92fd-6b4c01cbb899",
+          "name": "view_membership",
+          "description": "view_membership",
           "composite": false,
           "clientRole": true,
           "containerId": "e0806293-f9b3-44f1-a6d0-4e4406787f80",
@@ -819,6 +844,7 @@
                 "view_app_subscription",
                 "delete_documents",
                 "app_management",
+                "view_company_data",
                 "view_app_language",
                 "modify_user_account",
                 "add_connectors",
@@ -826,7 +852,7 @@
                 "view_user_management",
                 "view_idp",
                 "add_tech_user_management",
-                "add_app",
+                "add_apps",
                 "subscribe_service_offering",
                 "update_own_user_account",
                 "add_self_descriptions",
@@ -854,6 +880,7 @@
                 "view_services",
                 "add_idp",
                 "delete_idp",
+                "view_membership",
                 "view_dataspaces",
                 "add_service_offering",
                 "filter_apps",
@@ -1337,6 +1364,7 @@
       "sa-cl6-cx-5": [],
       "account-console": [],
       "Cl18-CX-Pal": [],
+      "sa-cl6-cx-30": [],
       "Cl17-CX-Part": [
         {
           "id": "98e9e3cd-6b11-440a-8405-126971c54244",
@@ -3062,6 +3090,27 @@
       "groups": []
     },
     {
+      "id": "eefdb17a-b59e-41c1-99db-a563c6e2a1dc",
+      "createdTimestamp": 1668590975255,
+      "username": "service-account-sa-cl6-cx-30",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "serviceAccountClientId": "sa-cl6-cx-30",
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "default-roles-catena-x realm"
+      ],
+      "clientRoles": {
+        "technical_roles_management": [
+          "App Tech User"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
       "id": "50c19120-550c-429a-b45c-fb402046d4be",
       "createdTimestamp": 1651729685848,
       "username": "service-account-sa-cl6-cx-4",
@@ -4101,14 +4150,14 @@
       "frontchannelLogout": false,
       "protocol": "openid-connect",
       "attributes": {
-        "id.token.as.detached.signature": "false",
         "saml.assertion.signature": "false",
-        "saml.force.post.binding": "false",
+        "id.token.as.detached.signature": "false",
         "saml.multivalued.roles": "false",
+        "saml.force.post.binding": "false",
         "saml.encrypt": "false",
         "oauth2.device.authorization.grant.enabled": "false",
-        "backchannel.logout.revoke.offline.tokens": "false",
         "saml.server.signature": "false",
+        "backchannel.logout.revoke.offline.tokens": "false",
         "saml.server.signature.keyinfo.ext": "false",
         "use.refresh.tokens": "true",
         "exclude.session.state.from.auth.response": "false",
@@ -4117,9 +4166,9 @@
         "backchannel.logout.session.required": "true",
         "client_credentials.use_refresh_token": "false",
         "saml_force_name_id_format": "false",
-        "require.pushed.authorization.requests": "false",
         "saml.client.signature": "false",
         "tls.client.certificate.bound.access.tokens": "false",
+        "require.pushed.authorization.requests": "false",
         "saml.authnstatement": "false",
         "display.on.consent.screen": "false",
         "saml.onetimeuse.condition": "false"
@@ -4149,7 +4198,7 @@
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "https://portal-gate.sharedidp.demo.catena-x.net/",
+        "https://portal-gate.dev.demo.catena-x.net/",
         "https://portal-gate.int.demo.catena-x.net/"
       ],
       "webOrigins": [
@@ -4166,10 +4215,10 @@
       "frontchannelLogout": false,
       "protocol": "openid-connect",
       "attributes": {
-        "id.token.as.detached.signature": "false",
         "saml.assertion.signature": "false",
-        "saml.force.post.binding": "false",
+        "id.token.as.detached.signature": "false",
         "saml.multivalued.roles": "false",
+        "saml.force.post.binding": "false",
         "saml.encrypt": "false",
         "oauth2.device.authorization.grant.enabled": "false",
         "backchannel.logout.revoke.offline.tokens": "false",
@@ -4182,9 +4231,9 @@
         "backchannel.logout.session.required": "true",
         "client_credentials.use_refresh_token": "false",
         "saml_force_name_id_format": "false",
-        "require.pushed.authorization.requests": "false",
         "saml.client.signature": "false",
         "tls.client.certificate.bound.access.tokens": "false",
+        "require.pushed.authorization.requests": "false",
         "saml.authnstatement": "false",
         "display.on.consent.screen": "false",
         "saml.onetimeuse.condition": "false"
@@ -5011,25 +5060,14 @@
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
-      "redirectUris": [
-        "https://portal.int.demo.catena-x.net/*",
-        "http://localhost:8080/*",
-        "https://partners-pool.int.demo.catena-x.net/*",
-        "https://catenax-bpdm-int.demo.catena-x.net/*",
-        "http://localhost:3000/*",
-        "https://partners-gate.int.demo.catena-x.net/*",
-        "https://portal.devsecops-testing.demo.catena-x.net/*",
-        "https://vas-country-risk-backend.int.demo.catena-x.net/*"
-      ],
-      "webOrigins": [
-        "+"
-      ],
+      "redirectUris": [],
+      "webOrigins": [],
       "notBefore": 0,
       "bearerOnly": true,
       "consentRequired": false,
       "standardFlowEnabled": true,
       "implicitFlowEnabled": false,
-      "directAccessGrantsEnabled": true,
+      "directAccessGrantsEnabled": false,
       "serviceAccountsEnabled": false,
       "publicClient": false,
       "frontchannelLogout": false,
@@ -5595,14 +5633,14 @@
       "frontchannelLogout": false,
       "protocol": "openid-connect",
       "attributes": {
-        "id.token.as.detached.signature": "false",
         "saml.assertion.signature": "false",
-        "saml.force.post.binding": "false",
+        "id.token.as.detached.signature": "false",
         "saml.multivalued.roles": "false",
+        "saml.force.post.binding": "false",
         "saml.encrypt": "false",
         "oauth2.device.authorization.grant.enabled": "false",
-        "backchannel.logout.revoke.offline.tokens": "false",
         "saml.server.signature": "false",
+        "backchannel.logout.revoke.offline.tokens": "false",
         "saml.server.signature.keyinfo.ext": "false",
         "use.refresh.tokens": "true",
         "exclude.session.state.from.auth.response": "false",
@@ -5611,9 +5649,9 @@
         "backchannel.logout.session.required": "true",
         "client_credentials.use_refresh_token": "false",
         "saml_force_name_id_format": "false",
-        "require.pushed.authorization.requests": "false",
         "saml.client.signature": "false",
         "tls.client.certificate.bound.access.tokens": "false",
+        "require.pushed.authorization.requests": "false",
         "saml.authnstatement": "false",
         "display.on.consent.screen": "false",
         "saml.onetimeuse.condition": "false"
@@ -5700,10 +5738,10 @@
       "frontchannelLogout": false,
       "protocol": "openid-connect",
       "attributes": {
-        "id.token.as.detached.signature": "false",
         "saml.assertion.signature": "false",
-        "saml.force.post.binding": "false",
+        "id.token.as.detached.signature": "false",
         "saml.multivalued.roles": "false",
+        "saml.force.post.binding": "false",
         "saml.encrypt": "false",
         "oauth2.device.authorization.grant.enabled": "false",
         "backchannel.logout.revoke.offline.tokens": "false",
@@ -5716,9 +5754,9 @@
         "backchannel.logout.session.required": "true",
         "client_credentials.use_refresh_token": "false",
         "saml_force_name_id_format": "false",
-        "require.pushed.authorization.requests": "false",
         "saml.client.signature": "false",
         "tls.client.certificate.bound.access.tokens": "false",
+        "require.pushed.authorization.requests": "false",
         "saml.authnstatement": "false",
         "display.on.consent.screen": "false",
         "saml.onetimeuse.condition": "false"
@@ -9522,6 +9560,111 @@
             "id.token.claim": "true",
             "access.token.claim": "true",
             "claim.name": "bpn",
+            "jsonType.label": "String"
+          }
+        }
+      ],
+      "defaultClientScopes": [
+        "web-origins",
+        "roles",
+        "profile",
+        "email"
+      ],
+      "optionalClientScopes": [
+        "address",
+        "phone",
+        "offline_access",
+        "microprofile-jwt"
+      ]
+    },
+    {
+      "id": "e81223c0-59b1-4788-a8d9-5022f13cc4b3",
+      "clientId": "sa-cl6-cx-30",
+      "description": "Technical User (READ) CX Battery for EDC integration scenario (Contact: Jochen Braun, CGI)",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "**********",
+      "redirectUris": [],
+      "webOrigins": [],
+      "notBefore": 0,
+      "bearerOnly": false,
+      "consentRequired": false,
+      "standardFlowEnabled": false,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": true,
+      "publicClient": false,
+      "frontchannelLogout": false,
+      "protocol": "openid-connect",
+      "attributes": {
+        "saml.assertion.signature": "false",
+        "id.token.as.detached.signature": "false",
+        "saml.multivalued.roles": "false",
+        "saml.force.post.binding": "false",
+        "saml.encrypt": "false",
+        "oauth2.device.authorization.grant.enabled": "false",
+        "backchannel.logout.revoke.offline.tokens": "false",
+        "saml.server.signature": "false",
+        "saml.server.signature.keyinfo.ext": "false",
+        "use.refresh.tokens": "true",
+        "exclude.session.state.from.auth.response": "false",
+        "oidc.ciba.grant.enabled": "false",
+        "saml.artifact.binding": "false",
+        "backchannel.logout.session.required": "true",
+        "client_credentials.use_refresh_token": "false",
+        "saml_force_name_id_format": "false",
+        "saml.client.signature": "false",
+        "tls.client.certificate.bound.access.tokens": "false",
+        "require.pushed.authorization.requests": "false",
+        "saml.authnstatement": "false",
+        "display.on.consent.screen": "false",
+        "saml.onetimeuse.condition": "false"
+      },
+      "authenticationFlowBindingOverrides": {},
+      "fullScopeAllowed": true,
+      "nodeReRegistrationTimeout": -1,
+      "protocolMappers": [
+        {
+          "id": "75a1c382-0549-45e4-876e-1e412ebdbb48",
+          "name": "Client ID",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientId",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientId",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "00c147fc-29c1-4d94-b998-d7c8ce3a720e",
+          "name": "Client Host",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientHost",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientHost",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "eb00dd9a-5ee6-4e79-86ca-e46e39ee1fc0",
+          "name": "Client IP Address",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientAddress",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientAddress",
             "jsonType.label": "String"
           }
         }
