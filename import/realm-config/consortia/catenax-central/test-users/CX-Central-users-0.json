@@ -494,6 +494,62 @@
     "notBefore" : 0,
     "groups" : [ ]
   }, {
+    "id" : "cd863f9a-5a04-44d6-bf8e-9d76e37139b2",
+    "createdTimestamp" : 1651814956235,
+    "username" : "cx-test-access.98715874-e65c-4780-95ad-fb4e8eb917a8",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "user",
+    "lastName" : "company 1",
+    "email" : "company1@user.de",
+    "attributes" : {
+      "organisation" : [ "CX-Test-Access" ],
+      "tenant" : [ "CX-Test-Access" ]
+    },
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "federatedIdentities" : [ {
+      "identityProvider" : "CX-Test-Access",
+      "userId" : "98715874-e65c-4780-95ad-fb4e8eb917a8",
+      "userName" : "company 1 user"
+    } ],
+    "realmRoles" : [ "default-roles-catena-x realm" ],
+    "clientRoles" : {
+      "Cl13-CX-Battery" : [ "Dismantler", "OEM" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "93a03e4c-8ba5-4d81-93f9-4b065b005b33",
+    "createdTimestamp" : 1651814956235,
+    "username" : "cx-test-access.08132c4c-146d-41ee-938a-09759783eea1",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "user",
+    "lastName" : "company 2",
+    "email" : "company2@user.de",
+    "attributes" : {
+      "organisation" : [ "CX-Test-Access" ],
+      "tenant" : [ "CX-Test-Access" ]
+    },
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "federatedIdentities" : [ {
+      "identityProvider" : "CX-Test-Access",
+      "userId" : "08132c4c-146d-41ee-938a-09759783eea1",
+      "userName" : "company 2 user"
+    } ],
+    "realmRoles" : [ "default-roles-catena-x realm" ],
+    "clientRoles" : {
+      "Cl13-CX-Battery" : [ "Recycler" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
     "id" : "8be5ee49-4b9c-4008-b641-138305430cc4",
     "createdTimestamp" : 1651814956235,
     "username" : "idp4.dc438ad3-8bcf-49cc-beb0-437be2745720",
