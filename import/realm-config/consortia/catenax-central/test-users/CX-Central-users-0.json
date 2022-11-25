@@ -550,6 +550,35 @@
     "notBefore" : 0,
     "groups" : [ ]
   }, {
+    "id" : "502dabcf-01c7-47d9-a88e-0be4279097b5",
+    "createdTimestamp" : 1651814956235,
+    "username" : "idp3.656e8a94-188b-4a3e-9eec-b45d8efd8347",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "Tester",
+    "lastName" : "CX Operator",
+    "email" : "cx-operator@cx.com",
+    "attributes" : {
+      "bpn" : [ "BPNL00000003CRHL" ],
+      "organisation" : [ "CX-Operator" ],
+      "tenant" : [ "idp3" ]
+    },
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "federatedIdentities" : [ {
+      "identityProvider" : "idp3",
+      "userId" : "656e8a94-188b-4a3e-9eec-b45d8efd8347",
+      "userName" : "cx-operator@cx.com"
+    } ],
+    "realmRoles" : [ "default-roles-catena-x realm" ],
+    "clientRoles" : {
+      "Cl2-CX-Portal" : [ "CX Admin" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
     "id" : "8be5ee49-4b9c-4008-b641-138305430cc4",
     "createdTimestamp" : 1651814956235,
     "username" : "idp4.dc438ad3-8bcf-49cc-beb0-437be2745720",
@@ -604,35 +633,6 @@
     "realmRoles" : [ "default-roles-catena-x realm" ],
     "clientRoles" : {
       "Cl2-CX-Portal" : [ "Company Admin" ]
-    },
-    "notBefore" : 0,
-    "groups" : [ ]
-  }, {
-    "id" : "502dabcf-01c7-47d9-a88e-0be4279097b5",
-    "createdTimestamp" : 1651814956235,
-    "username" : "idp6.656e8a94-188b-4a3e-9eec-b45d8efd8347",
-    "enabled" : true,
-    "totp" : false,
-    "emailVerified" : false,
-    "firstName" : "Tester",
-    "lastName" : "CX Operator",
-    "email" : "cx-operator@cx.com",
-    "attributes" : {
-      "bpn" : [ "BPNL00000003CRHL" ],
-      "organisation" : [ "CX-Operator" ],
-      "tenant" : [ "idp6" ]
-    },
-    "credentials" : [ ],
-    "disableableCredentialTypes" : [ ],
-    "requiredActions" : [ ],
-    "federatedIdentities" : [ {
-      "identityProvider" : "idp6",
-      "userId" : "656e8a94-188b-4a3e-9eec-b45d8efd8347",
-      "userName" : "cx-operator@cx.com"
-    } ],
-    "realmRoles" : [ "default-roles-catena-x realm" ],
-    "clientRoles" : {
-      "Cl2-CX-Portal" : [ "CX Admin" ]
     },
     "notBefore" : 0,
     "groups" : [ ]
