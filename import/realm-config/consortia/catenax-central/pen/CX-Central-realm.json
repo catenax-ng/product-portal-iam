@@ -13400,7 +13400,7 @@
       }
     },
     {
-      "alias": "idp6",
+      "alias": "CX-Operator",
       "displayName": "CX-Operator",
       "internalId": "fbc571fd-cd44-4cec-a36e-4eba647fe712",
       "providerId": "keycloak-oidc",
@@ -13416,11 +13416,11 @@
         "hideOnLoginPage": "false",
         "validateSignature": "true",
         "clientId": "central-idp",
-        "tokenUrl": "https://sharedidp-pen.dev.demo.catena-x.net/auth/realms/idp6/protocol/openid-connect/token",
-        "authorizationUrl": "https://sharedidp-pen.dev.demo.catena-x.net/auth/realms/idp6/protocol/openid-connect/auth",
-        "jwksUrl": "https://sharedidp-pen.dev.demo.catena-x.net/auth/realms/idp6/protocol/openid-connect/certs",
+        "tokenUrl": "https://sharedidp-pen.dev.demo.catena-x.net/auth/realms/CX-Operator/protocol/openid-connect/token",
+        "authorizationUrl": "https://sharedidp-pen.dev.demo.catena-x.net/auth/realms/CX-Operator/protocol/openid-connect/auth",
+        "jwksUrl": "https://sharedidp-pen.dev.demo.catena-x.net/auth/realms/CX-Operator/protocol/openid-connect/certs",
         "clientAuthMethod": "private_key_jwt",
-        "logoutUrl": "https://sharedidp-pen.dev.demo.catena-x.net/auth/realms/idp6/protocol/openid-connect/logout",
+        "logoutUrl": "https://sharedidp-pen.dev.demo.catena-x.net/auth/realms/CX-Operator/protocol/openid-connect/logout",
         "clientAssertionSigningAlg": "RS256",
         "syncMode": "FORCE",
         "useJwksUrl": "true"
@@ -13442,11 +13442,11 @@
     {
       "id": "fbbbb9d0-f273-49cc-8a7a-a2dc06b309f6",
       "name": "tenant-mapper",
-      "identityProviderAlias": "idp6",
+      "identityProviderAlias": "CX-Operator",
       "identityProviderMapper": "hardcoded-attribute-idp-mapper",
       "config": {
         "syncMode": "INHERIT",
-        "attribute.value": "idp6",
+        "attribute.value": "CX-Operator",
         "attribute": "tenant"
       }
     },
@@ -13585,7 +13585,7 @@
     {
       "id": "6d86e1a2-71b9-4a64-9615-1ee59198c7f7",
       "name": "organisation-mapper",
-      "identityProviderAlias": "idp6",
+      "identityProviderAlias": "CX-Operator",
       "identityProviderMapper": "hardcoded-attribute-idp-mapper",
       "config": {
         "syncMode": "INHERIT",
@@ -13629,7 +13629,7 @@
     {
       "id": "3986165a-cd68-4778-8564-8f6658e166f3",
       "name": "username-mapper",
-      "identityProviderAlias": "idp6",
+      "identityProviderAlias": "CX-Operator",
       "identityProviderMapper": "oidc-username-idp-mapper",
       "config": {
         "template": "${ALIAS}.${CLAIM.sub}",

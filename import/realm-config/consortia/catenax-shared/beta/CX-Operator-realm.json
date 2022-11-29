@@ -1,6 +1,6 @@
 {
-  "id": "idp6",
-  "realm": "idp6",
+  "id": "CX-Operator",
+  "realm": "CX-Operator",
   "displayName": "CX-Operator",
   "notBefore": 0,
   "defaultSignatureAlgorithm": "RS256",
@@ -48,7 +48,7 @@
     "realm": [
       {
         "id": "f9e700c4-3479-4df9-8f66-32d3d0aa402f",
-        "name": "default-roles-idp6",
+        "name": "default-roles-cx-operator",
         "description": "${role_default-roles}",
         "composite": true,
         "composites": {
@@ -64,7 +64,7 @@
           }
         },
         "clientRole": false,
-        "containerId": "idp6",
+        "containerId": "CX-Operator",
         "attributes": {}
       },
       {
@@ -73,7 +73,7 @@
         "description": "${role_offline-access}",
         "composite": false,
         "clientRole": false,
-        "containerId": "idp6",
+        "containerId": "CX-Operator",
         "attributes": {}
       },
       {
@@ -82,7 +82,7 @@
         "description": "${role_uma_authorization}",
         "composite": false,
         "clientRole": false,
-        "containerId": "idp6",
+        "containerId": "CX-Operator",
         "attributes": {}
       }
     ],
@@ -398,11 +398,11 @@
   "groups": [],
   "defaultRole": {
     "id": "f9e700c4-3479-4df9-8f66-32d3d0aa402f",
-    "name": "default-roles-idp6",
+    "name": "default-roles-cx-operator",
     "description": "${role_default-roles}",
     "composite": true,
     "clientRole": false,
-    "containerId": "idp6"
+    "containerId": "CX-Operator"
   },
   "requiredCredentials": [
     "password"
@@ -466,13 +466,13 @@
       "clientId": "account",
       "name": "${client_account}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/idp6/account/",
+      "baseUrl": "/realms/CX-Operator/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/realms/idp6/account/*"
+        "/realms/CX-Operator/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -507,13 +507,13 @@
       "clientId": "account-console",
       "name": "${client_account-console}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/idp6/account/",
+      "baseUrl": "/realms/CX-Operator/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/realms/idp6/account/*"
+        "/realms/CX-Operator/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -638,7 +638,7 @@
       "clientAuthenticatorType": "client-jwt",
       "secret": "**********",
       "redirectUris": [
-        "https://centralidp.int.demo.catena-x.net/auth/realms/CX-Central/broker/idp6/endpoint/*"
+        "https://centralidp.beta.demo.catena-x.net/auth/realms/CX-Central/broker/CX-Operator/endpoint/*"
       ],
       "webOrigins": [
         "+"
@@ -657,7 +657,7 @@
         "token.endpoint.auth.signing.alg": "RS256",
         "use.jwks.url": "true",
         "backchannel.logout.session.required": "true",
-        "jwks.url": "https://centralidp.int.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/certs",
+        "jwks.url": "https://centralidp.beta.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/certs",
         "backchannel.logout.revoke.offline.tokens": "false"
       },
       "authenticationFlowBindingOverrides": {},
@@ -718,13 +718,13 @@
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
       "rootUrl": "${authAdminUrl}",
-      "baseUrl": "/admin/idp6/console/",
+      "baseUrl": "/admin/CX-Operator/console/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/admin/idp6/console/*"
+        "/admin/CX-Operator/console/*"
       ],
       "webOrigins": [
         "+"
