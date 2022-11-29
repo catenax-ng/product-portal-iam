@@ -1,6 +1,6 @@
 {
-  "id": "idp5",
-  "realm": "idp5",
+  "id": "App-Provider",
+  "realm": "App-Provider",
   "displayName": "App-Provider",
   "notBefore": 0,
   "defaultSignatureAlgorithm": "RS256",
@@ -52,7 +52,7 @@
         "description": "${role_uma_authorization}",
         "composite": false,
         "clientRole": false,
-        "containerId": "idp5",
+        "containerId": "App-Provider",
         "attributes": {}
       },
       {
@@ -61,12 +61,12 @@
         "description": "${role_offline-access}",
         "composite": false,
         "clientRole": false,
-        "containerId": "idp5",
+        "containerId": "App-Provider",
         "attributes": {}
       },
       {
         "id": "fd663c27-1fea-4d1b-9f19-7dd746e67f57",
-        "name": "default-roles-idp5",
+        "name": "default-roles-app-provider",
         "description": "${role_default-roles}",
         "composite": true,
         "composites": {
@@ -82,7 +82,7 @@
           }
         },
         "clientRole": false,
-        "containerId": "idp5",
+        "containerId": "App-Provider",
         "attributes": {}
       }
     ],
@@ -398,11 +398,11 @@
   "groups": [],
   "defaultRole": {
     "id": "fd663c27-1fea-4d1b-9f19-7dd746e67f57",
-    "name": "default-roles-idp5",
+    "name": "default-roles-app-provider",
     "description": "${role_default-roles}",
     "composite": true,
     "clientRole": false,
-    "containerId": "idp5"
+    "containerId": "App-Provider"
   },
   "requiredCredentials": [
     "password"
@@ -466,13 +466,13 @@
       "clientId": "account",
       "name": "${client_account}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/idp5/account/",
+      "baseUrl": "/realms/App-Provider/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/realms/idp5/account/*"
+        "/realms/App-Provider/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -507,13 +507,13 @@
       "clientId": "account-console",
       "name": "${client_account-console}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/idp5/account/",
+      "baseUrl": "/realms/App-Provider/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/realms/idp5/account/*"
+        "/realms/App-Provider/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -638,7 +638,7 @@
       "clientAuthenticatorType": "client-jwt",
       "secret": "**********",
       "redirectUris": [
-        "https://centralidp.int.demo.catena-x.net/auth/realms/CX-Central/broker/idp5/endpoint/*"
+        "https://centralidp-pen.dev.demo.catena-x.net/auth/realms/CX-Central/broker/App-Provider/endpoint/*"
       ],
       "webOrigins": [
         "+"
@@ -657,7 +657,7 @@
         "token.endpoint.auth.signing.alg": "RS256",
         "use.jwks.url": "true",
         "backchannel.logout.session.required": "true",
-        "jwks.url": "https://centralidp.int.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/certs",
+        "jwks.url": "https://centralidp-pen.dev.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/certs",
         "backchannel.logout.revoke.offline.tokens": "false"
       },
       "authenticationFlowBindingOverrides": {},
@@ -718,13 +718,13 @@
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
       "rootUrl": "${authAdminUrl}",
-      "baseUrl": "/admin/idp5/console/",
+      "baseUrl": "/admin/App-Provider/console/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/admin/idp5/console/*"
+        "/admin/App-Provider/console/*"
       ],
       "webOrigins": [
         "+"

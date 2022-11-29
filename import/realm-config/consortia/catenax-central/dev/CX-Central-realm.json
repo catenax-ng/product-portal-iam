@@ -13373,7 +13373,7 @@
       }
     },
     {
-      "alias": "idp5",
+      "alias": "App-Provider",
       "displayName": "App-Provider",
       "internalId": "fc91ae64-319e-4b29-ae2a-599da7a53f3e",
       "providerId": "keycloak-oidc",
@@ -13389,11 +13389,11 @@
         "hideOnLoginPage": "false",
         "validateSignature": "true",
         "clientId": "central-idp",
-        "tokenUrl": "https://sharedidp.dev.demo.catena-x.net/auth/realms/idp5/protocol/openid-connect/token",
-        "authorizationUrl": "https://sharedidp.dev.demo.catena-x.net/auth/realms/idp5/protocol/openid-connect/auth",
-        "jwksUrl": "https://sharedidp.dev.demo.catena-x.net/auth/realms/idp5/protocol/openid-connect/certs",
+        "tokenUrl": "https://sharedidp.dev.demo.catena-x.net/auth/realms/App-Provider/protocol/openid-connect/token",
+        "authorizationUrl": "https://sharedidp.dev.demo.catena-x.net/auth/realms/App-Provider/protocol/openid-connect/auth",
+        "jwksUrl": "https://sharedidp.dev.demo.catena-x.net/auth/realms/App-Provider/protocol/openid-connect/certs",
         "clientAuthMethod": "private_key_jwt",
-        "logoutUrl": "https://sharedidp.dev.demo.catena-x.net/auth/realms/idp5/protocol/openid-connect/logout",
+        "logoutUrl": "https://sharedidp.dev.demo.catena-x.net/auth/realms/App-Provider/protocol/openid-connect/logout",
         "clientAssertionSigningAlg": "RS256",
         "syncMode": "FORCE",
         "useJwksUrl": "true"
@@ -13431,7 +13431,7 @@
     {
       "id": "2d386237-6ff9-4115-881d-3c2636fdd3e6",
       "name": "organisation-mapper",
-      "identityProviderAlias": "idp5",
+      "identityProviderAlias": "App-Provider",
       "identityProviderMapper": "hardcoded-attribute-idp-mapper",
       "config": {
         "syncMode": "INHERIT",
@@ -13618,11 +13618,11 @@
     {
       "id": "fe3f0e70-6828-4452-b31f-02256e016711",
       "name": "tenant-mapper",
-      "identityProviderAlias": "idp5",
+      "identityProviderAlias": "App-Provider",
       "identityProviderMapper": "hardcoded-attribute-idp-mapper",
       "config": {
         "syncMode": "INHERIT",
-        "attribute.value": "idp5",
+        "attribute.value": "App-Provider",
         "attribute": "tenant"
       }
     },
@@ -13651,7 +13651,7 @@
     {
       "id": "b7a36783-b195-497c-9855-d2d8d3a26e03",
       "name": "username-mapper",
-      "identityProviderAlias": "idp5",
+      "identityProviderAlias": "App-Provider",
       "identityProviderMapper": "oidc-username-idp-mapper",
       "config": {
         "template": "${ALIAS}.${CLAIM.sub}",

@@ -98,4 +98,4 @@ secrets:
     securitycompany: "<path:portal/data/iam/sharedidp-user#Security-Company-users-0.json>"
     cxoperator: "<path:portal/data/iam/sharedidp-user#CX-Operator-users-0.json>"
     serviceprovider: "<path:portal/data/iam/sharedidp-user#Service-Provider-users-0.json>"
-    appprovider: "<path:portal/data/iam/sharedidp-user#idp5-users-0.json>"
+    appprovider: "<path:portal/data/iam/sharedidp-user#App-Provider-users-0.json>"

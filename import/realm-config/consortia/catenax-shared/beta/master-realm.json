@@ -179,7 +179,7 @@
               "manage-clients",
               "view-realm"
             ],
-            "idp5-realm": [
+            "App-Provider-realm": [
               "manage-identity-providers",
               "view-authorization",
               "query-groups",
@@ -475,7 +475,7 @@
       ],
       "security-admin-console": [],
       "saService-Provider": [],
-      "idp5-realm": [
+      "App-Provider-realm": [
         {
           "id": "f1d51e8f-3f52-4790-b678-0448e1d476af",
           "name": "view-events",
@@ -510,7 +510,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "idp5-realm": [
+              "App-Provider-realm": [
                 "query-clients"
               ]
             }
@@ -544,7 +544,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "idp5-realm": [
+              "App-Provider-realm": [
                 "query-users",
                 "query-groups"
               ]
@@ -656,7 +656,7 @@
       ],
       "saCX-Operator": [],
       "account-console": [],
-      "saidp5": [],
+      "saApp-Provider": [],
       "broker": [
         {
           "id": "af71a761-9a75-41ff-a6ee-c77e72f595db",
@@ -2106,11 +2106,11 @@
     {
       "id": "b3a88307-e809-4d1e-bf9e-95d272b2ec08",
       "createdTimestamp": 1667916400014,
-      "username": "service-account-saidp5",
+      "username": "service-account-saApp-Provider",
       "enabled": true,
       "totp": false,
       "emailVerified": false,
-      "serviceAccountClientId": "saidp5",
+      "serviceAccountClientId": "saApp-Provider",
       "disableableCredentialTypes": [],
       "requiredActions": [],
       "realmRoles": [
@@ -2118,7 +2118,7 @@
         "create-realm"
       ],
       "clientRoles": {
-        "idp5-realm": [
+        "App-Provider-realm": [
           "view-events",
           "manage-identity-providers",
           "manage-authorization",
@@ -2513,8 +2513,8 @@
     },
     {
       "id": "bdfe8696-2b0d-460c-8281-04e52182a190",
-      "clientId": "idp5-realm",
-      "name": "idp5 Realm",
+      "clientId": "App-Provider-realm",
+      "name": "App-Provider Realm",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -3127,8 +3127,8 @@
     },
     {
       "id": "d430cf93-c417-4e30-882c-0b1533093b90",
-      "clientId": "saidp5",
-      "name": "saidp5",
+      "clientId": "saApp-Provider",
+      "name": "saApp-Provider",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
