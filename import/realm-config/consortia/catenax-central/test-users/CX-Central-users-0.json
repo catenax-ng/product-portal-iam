@@ -581,7 +581,7 @@
   }, {
     "id" : "8be5ee49-4b9c-4008-b641-138305430cc4",
     "createdTimestamp" : 1651814956235,
-    "username" : "idp4.dc438ad3-8bcf-49cc-beb0-437be2745720",
+    "username" : "service-provider.dc438ad3-8bcf-49cc-beb0-437be2745720",
     "enabled" : true,
     "totp" : false,
     "emailVerified" : false,
@@ -591,13 +591,13 @@
     "attributes" : {
       "bpn" : [ "BPNL07800HZ01643" ],
       "organisation" : [ "Service-Provider" ],
-      "tenant" : [ "idp4" ]
+      "tenant" : [ "Service-Provider" ]
     },
     "credentials" : [ ],
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
     "federatedIdentities" : [ {
-      "identityProvider" : "idp4",
+      "identityProvider" : "Service-Provider",
       "userId" : "dc438ad3-8bcf-49cc-beb0-437be2745720",
       "userName" : "service-provider@cx.com"
     } ],

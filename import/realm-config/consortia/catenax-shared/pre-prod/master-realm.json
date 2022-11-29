@@ -139,7 +139,7 @@
               "manage-users",
               "query-clients"
             ],
-            "idp4-realm": [
+            "Service-Provider-realm": [
               "view-users",
               "query-users",
               "view-events",
@@ -294,7 +294,7 @@
       }
     ],
     "client": {
-      "idp4-realm": [
+      "Service-Provider-realm": [
         {
           "id": "a8f1b415-c048-4b0f-bff9-72006514acdf",
           "name": "view-clients",
@@ -302,7 +302,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "idp4-realm": [
+              "Service-Provider-realm": [
                 "query-clients"
               ]
             }
@@ -318,7 +318,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "idp4-realm": [
+              "Service-Provider-realm": [
                 "query-groups",
                 "query-users"
               ]
@@ -474,7 +474,7 @@
         }
       ],
       "security-admin-console": [],
-      "saidp4": [],
+      "saService-Provider": [],
       "idp5-realm": [
         {
           "id": "f1d51e8f-3f52-4790-b678-0448e1d476af",
@@ -2068,11 +2068,11 @@
     {
       "id": "dab91af3-d47a-4995-acfe-5afd144791e8",
       "createdTimestamp": 1667916201244,
-      "username": "service-account-saidp4",
+      "username": "service-account-saService-Provider",
       "enabled": true,
       "totp": false,
       "emailVerified": false,
-      "serviceAccountClientId": "saidp4",
+      "serviceAccountClientId": "saService-Provider",
       "disableableCredentialTypes": [],
       "requiredActions": [],
       "realmRoles": [
@@ -2080,7 +2080,7 @@
         "create-realm"
       ],
       "clientRoles": {
-        "idp4-realm": [
+        "Service-Provider-realm": [
           "view-users",
           "view-clients",
           "view-identity-providers",
@@ -2487,8 +2487,8 @@
     },
     {
       "id": "644662f9-26c3-4659-bc2e-44c5717aa9a4",
-      "clientId": "idp4-realm",
-      "name": "idp4 Realm",
+      "clientId": "Service-Provider-realm",
+      "name": "Service-Provider Realm",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -3038,8 +3038,8 @@
     },
     {
       "id": "b6cbc5a4-93df-470d-abc0-c476e82685e9",
-      "clientId": "saidp4",
-      "name": "saidp4",
+      "clientId": "saService-Provider",
+      "name": "saService-Provider",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,

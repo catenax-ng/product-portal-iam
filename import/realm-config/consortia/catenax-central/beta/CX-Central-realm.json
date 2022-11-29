@@ -13346,7 +13346,7 @@
       }
     },
     {
-      "alias": "idp4",
+      "alias": "Service-Provider",
       "displayName": "Service-Provider",
       "internalId": "94318a98-b4e7-4a0a-8742-4e8fdfcbd626",
       "providerId": "keycloak-oidc",
@@ -13362,11 +13362,11 @@
         "hideOnLoginPage": "false",
         "validateSignature": "true",
         "clientId": "central-idp",
-        "tokenUrl": "https://sharedidp.beta.demo.catena-x.net/auth/realms/idp4/protocol/openid-connect/token",
-        "authorizationUrl": "https://sharedidp.beta.demo.catena-x.net/auth/realms/idp4/protocol/openid-connect/auth",
-        "jwksUrl": "https://sharedidp.beta.demo.catena-x.net/auth/realms/idp4/protocol/openid-connect/certs",
+        "tokenUrl": "https://sharedidp.beta.demo.catena-x.net/auth/realms/Service-Provider/protocol/openid-connect/token",
+        "authorizationUrl": "https://sharedidp.beta.demo.catena-x.net/auth/realms/Service-Provider/protocol/openid-connect/auth",
+        "jwksUrl": "https://sharedidp.beta.demo.catena-x.net/auth/realms/Service-Provider/protocol/openid-connect/certs",
         "clientAuthMethod": "private_key_jwt",
-        "logoutUrl": "https://sharedidp.beta.demo.catena-x.net/auth/realms/idp4/protocol/openid-connect/logout",
+        "logoutUrl": "https://sharedidp.beta.demo.catena-x.net/auth/realms/Service-Provider/protocol/openid-connect/logout",
         "clientAssertionSigningAlg": "RS256",
         "syncMode": "FORCE",
         "useJwksUrl": "true"
@@ -13541,7 +13541,7 @@
     {
       "id": "3a9e3d0c-c114-422d-94ef-2a05cc99a7b4",
       "name": "organisation-mapper",
-      "identityProviderAlias": "idp4",
+      "identityProviderAlias": "Service-Provider",
       "identityProviderMapper": "hardcoded-attribute-idp-mapper",
       "config": {
         "syncMode": "INHERIT",
@@ -13552,7 +13552,7 @@
     {
       "id": "bc56a8a0-b1b1-4a58-bbd3-1538071786cf",
       "name": "username-mapper",
-      "identityProviderAlias": "idp4",
+      "identityProviderAlias": "Service-Provider",
       "identityProviderMapper": "oidc-username-idp-mapper",
       "config": {
         "template": "${ALIAS}.${CLAIM.sub}",
@@ -13563,11 +13563,11 @@
     {
       "id": "d8754d6b-957f-4449-8c5b-e67771baa4d5",
       "name": "tenant-mapper",
-      "identityProviderAlias": "idp4",
+      "identityProviderAlias": "Service-Provider",
       "identityProviderMapper": "hardcoded-attribute-idp-mapper",
       "config": {
         "syncMode": "INHERIT",
-        "attribute.value": "idp4",
+        "attribute.value": "Service-Provider",
         "attribute": "tenant"
       }
     },
