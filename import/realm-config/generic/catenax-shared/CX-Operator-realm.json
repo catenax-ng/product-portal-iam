@@ -1305,17 +1305,6 @@
     "xXSSProtection": "1; mode=block",
     "strictTransportSecurity": "max-age=31536000; includeSubDomains"
   },
-  "smtpServer": {
-    "password": "**********",
-    "starttls": "true",
-    "auth": "true",
-    "port": "587",
-    "host": "smtp.office365.com",
-    "replyTo": "no-reply@catena-x.net",
-    "from": "Notifications@catena-x.net",
-    "ssl": "",
-    "user": "Notifications@catena-x.net"
-  },
   "eventsEnabled": false,
   "eventsListeners": [
     "jboss-logging"
