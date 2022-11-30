@@ -139,7 +139,7 @@
               "manage-users",
               "query-clients"
             ],
-            "idp4-realm": [
+            "Service-Provider-realm": [
               "view-users",
               "query-users",
               "view-events",
@@ -179,7 +179,7 @@
               "manage-clients",
               "view-realm"
             ],
-            "idp5-realm": [
+            "App-Provider-realm": [
               "manage-identity-providers",
               "view-authorization",
               "query-groups",
@@ -219,7 +219,7 @@
               "view-users",
               "view-realm"
             ],
-            "idp6-realm": [
+            "CX-Operator-realm": [
               "manage-authorization",
               "query-groups",
               "view-users",
@@ -294,7 +294,7 @@
       }
     ],
     "client": {
-      "idp4-realm": [
+      "Service-Provider-realm": [
         {
           "id": "a8f1b415-c048-4b0f-bff9-72006514acdf",
           "name": "view-clients",
@@ -302,7 +302,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "idp4-realm": [
+              "Service-Provider-realm": [
                 "query-clients"
               ]
             }
@@ -318,7 +318,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "idp4-realm": [
+              "Service-Provider-realm": [
                 "query-groups",
                 "query-users"
               ]
@@ -474,8 +474,8 @@
         }
       ],
       "security-admin-console": [],
-      "saidp4": [],
-      "idp5-realm": [
+      "saService-Provider": [],
+      "App-Provider-realm": [
         {
           "id": "f1d51e8f-3f52-4790-b678-0448e1d476af",
           "name": "view-events",
@@ -510,7 +510,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "idp5-realm": [
+              "App-Provider-realm": [
                 "query-clients"
               ]
             }
@@ -544,7 +544,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "idp5-realm": [
+              "App-Provider-realm": [
                 "query-users",
                 "query-groups"
               ]
@@ -654,9 +654,9 @@
           "attributes": {}
         }
       ],
-      "saidp6": [],
+      "saCX-Operator": [],
       "account-console": [],
-      "saidp5": [],
+      "saApp-Provider": [],
       "broker": [
         {
           "id": "af71a761-9a75-41ff-a6ee-c77e72f595db",
@@ -1026,7 +1026,7 @@
           "attributes": {}
         }
       ],
-      "idp6-realm": [
+      "CX-Operator-realm": [
         {
           "id": "013ce7f0-c788-4a82-a631-41ba84097f7f",
           "name": "manage-authorization",
@@ -1115,7 +1115,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "idp6-realm": [
+              "CX-Operator-realm": [
                 "query-clients"
               ]
             }
@@ -1185,7 +1185,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "idp6-realm": [
+              "CX-Operator-realm": [
                 "query-users",
                 "query-groups"
               ]
@@ -2068,11 +2068,11 @@
     {
       "id": "dab91af3-d47a-4995-acfe-5afd144791e8",
       "createdTimestamp": 1667916201244,
-      "username": "service-account-saidp4",
+      "username": "service-account-saService-Provider",
       "enabled": true,
       "totp": false,
       "emailVerified": false,
-      "serviceAccountClientId": "saidp4",
+      "serviceAccountClientId": "saService-Provider",
       "disableableCredentialTypes": [],
       "requiredActions": [],
       "realmRoles": [
@@ -2080,7 +2080,7 @@
         "create-realm"
       ],
       "clientRoles": {
-        "idp4-realm": [
+        "Service-Provider-realm": [
           "view-users",
           "view-clients",
           "view-identity-providers",
@@ -2106,11 +2106,11 @@
     {
       "id": "b3a88307-e809-4d1e-bf9e-95d272b2ec08",
       "createdTimestamp": 1667916400014,
-      "username": "service-account-saidp5",
+      "username": "service-account-saApp-Provider",
       "enabled": true,
       "totp": false,
       "emailVerified": false,
-      "serviceAccountClientId": "saidp5",
+      "serviceAccountClientId": "saApp-Provider",
       "disableableCredentialTypes": [],
       "requiredActions": [],
       "realmRoles": [
@@ -2118,7 +2118,7 @@
         "create-realm"
       ],
       "clientRoles": {
-        "idp5-realm": [
+        "App-Provider-realm": [
           "view-events",
           "manage-identity-providers",
           "manage-authorization",
@@ -2144,11 +2144,11 @@
     {
       "id": "16c63ad1-51dd-4cb2-8d2f-0845ecd63420",
       "createdTimestamp": 1667916488132,
-      "username": "service-account-saidp6",
+      "username": "service-account-saCX-Operator",
       "enabled": true,
       "totp": false,
       "emailVerified": false,
-      "serviceAccountClientId": "saidp6",
+      "serviceAccountClientId": "saCX-Operator",
       "disableableCredentialTypes": [],
       "requiredActions": [],
       "realmRoles": [
@@ -2156,7 +2156,7 @@
         "create-realm"
       ],
       "clientRoles": {
-        "idp6-realm": [
+        "CX-Operator-realm": [
           "manage-authorization",
           "view-identity-providers",
           "view-realm",
@@ -2487,8 +2487,8 @@
     },
     {
       "id": "644662f9-26c3-4659-bc2e-44c5717aa9a4",
-      "clientId": "idp4-realm",
-      "name": "idp4 Realm",
+      "clientId": "Service-Provider-realm",
+      "name": "Service-Provider Realm",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -2513,8 +2513,8 @@
     },
     {
       "id": "bdfe8696-2b0d-460c-8281-04e52182a190",
-      "clientId": "idp5-realm",
-      "name": "idp5 Realm",
+      "clientId": "App-Provider-realm",
+      "name": "App-Provider Realm",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -2539,8 +2539,8 @@
     },
     {
       "id": "64acfb98-b4e9-42da-936f-815848d841c5",
-      "clientId": "idp6-realm",
-      "name": "idp6 Realm",
+      "clientId": "CX-Operator-realm",
+      "name": "CX-Operator Realm",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -3038,8 +3038,8 @@
     },
     {
       "id": "b6cbc5a4-93df-470d-abc0-c476e82685e9",
-      "clientId": "saidp4",
-      "name": "saidp4",
+      "clientId": "saService-Provider",
+      "name": "saService-Provider",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -3127,8 +3127,8 @@
     },
     {
       "id": "d430cf93-c417-4e30-882c-0b1533093b90",
-      "clientId": "saidp5",
-      "name": "saidp5",
+      "clientId": "saApp-Provider",
+      "name": "saApp-Provider",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -3216,8 +3216,8 @@
     },
     {
       "id": "22dcd29e-f435-4662-98db-5a9b35d1109e",
-      "clientId": "saidp6",
-      "name": "saidp6",
+      "clientId": "saCX-Operator",
+      "name": "saCX-Operator",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,

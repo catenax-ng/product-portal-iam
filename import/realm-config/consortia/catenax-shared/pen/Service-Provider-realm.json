@@ -1,6 +1,6 @@
 {
-  "id": "idp4",
-  "realm": "idp4",
+  "id": "Service-Provider",
+  "realm": "Service-Provider",
   "displayName": "Service-Provider",
   "notBefore": 0,
   "defaultSignatureAlgorithm": "RS256",
@@ -52,7 +52,7 @@
         "description": "${role_offline-access}",
         "composite": false,
         "clientRole": false,
-        "containerId": "idp4",
+        "containerId": "Service-Provider",
         "attributes": {}
       },
       {
@@ -61,12 +61,12 @@
         "description": "${role_uma_authorization}",
         "composite": false,
         "clientRole": false,
-        "containerId": "idp4",
+        "containerId": "Service-Provider",
         "attributes": {}
       },
       {
         "id": "bf44d46c-5aac-464b-bd81-5047b3fba34e",
-        "name": "default-roles-idp4",
+        "name": "default-roles-service-provider",
         "description": "${role_default-roles}",
         "composite": true,
         "composites": {
@@ -82,7 +82,7 @@
           }
         },
         "clientRole": false,
-        "containerId": "idp4",
+        "containerId": "Service-Provider",
         "attributes": {}
       }
     ],
@@ -398,11 +398,11 @@
   "groups": [],
   "defaultRole": {
     "id": "bf44d46c-5aac-464b-bd81-5047b3fba34e",
-    "name": "default-roles-idp4",
+    "name": "default-roles-service-provider",
     "description": "${role_default-roles}",
     "composite": true,
     "clientRole": false,
-    "containerId": "idp4"
+    "containerId": "Service-Provider"
   },
   "requiredCredentials": [
     "password"
@@ -466,13 +466,13 @@
       "clientId": "account",
       "name": "${client_account}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/idp4/account/",
+      "baseUrl": "/realms/Service-Provider/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/realms/idp4/account/*"
+        "/realms/Service-Provider/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -507,13 +507,13 @@
       "clientId": "account-console",
       "name": "${client_account-console}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/idp4/account/",
+      "baseUrl": "/realms/Service-Provider/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/realms/idp4/account/*"
+        "/realms/Service-Provider/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -638,7 +638,7 @@
       "clientAuthenticatorType": "client-jwt",
       "secret": "**********",
       "redirectUris": [
-        "https://centralidp.dev.demo.catena-x.net/auth/realms/CX-Central/broker/idp4/endpoint/*"
+        "https://centralidp-pen.dev.demo.catena-x.net/auth/realms/CX-Central/broker/Service-Provider/endpoint/*"
       ],
       "webOrigins": [
         "+"
@@ -657,7 +657,7 @@
         "token.endpoint.auth.signing.alg": "RS256",
         "use.jwks.url": "true",
         "backchannel.logout.session.required": "true",
-        "jwks.url": "https://centralidp.dev.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/certs",
+        "jwks.url": "https://centralidp-pen.dev.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/certs",
         "backchannel.logout.revoke.offline.tokens": "false"
       },
       "authenticationFlowBindingOverrides": {},
@@ -718,13 +718,13 @@
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
       "rootUrl": "${authAdminUrl}",
-      "baseUrl": "/admin/idp4/console/",
+      "baseUrl": "/admin/Service-Provider/console/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "/admin/idp4/console/*"
+        "/admin/Service-Provider/console/*"
       ],
       "webOrigins": [
         "+"

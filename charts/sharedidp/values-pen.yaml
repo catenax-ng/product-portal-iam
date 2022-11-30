@@ -39,7 +39,7 @@ keycloak:
       mountPath: "/secrets"
   initContainers:
     - name: import
-      image: ghcr.io/catenax-ng/product-portal-iam_iam-import-pen:v0.7.0
+      image: ghcr.io/catenax-ng/product-portal-iam_iam-import-pen:v0.9.0
       imagePullPolicy: Always
       command:
         - sh
@@ -96,9 +96,9 @@ secrets:
     company1user: "<path:portal/data/iam/sharedidp-user#Company-1-users-0.json>"
     company2user: "<path:portal/data/iam/sharedidp-user#Company-2-users-0.json>"
     securitycompany: "<path:portal/data/iam/sharedidp-user#Security-Company-users-0.json>"
-    serviceprovider: "<path:portal/data/iam/sharedidp-user#idp4.json>"
-    approvider: "<path:portal/data/iam/sharedidp-user#idp5.json>"
-    cxoperator: "<path:portal/data/iam/sharedidp-user#idp6.json>"
-    serviceprovider: "<path:portal/data/iam/sharedidp-user#idp4-users-0.json>"
-    appprovider: "<path:portal/data/iam/sharedidp-user#idp5-users-0.json>"
-    cxoperator: "<path:portal/data/iam/sharedidp-user#idp6-users-0.json>"
+    serviceprovider: "<path:portal/data/iam/sharedidp-user#Service-Provider.json>"
+    approvider: "<path:portal/data/iam/sharedidp-user#App-Provider.json>"
+    cxoperator: "<path:portal/data/iam/sharedidp-user#CX-Operator.json>"
+    cxoperator: "<path:portal/data/iam/sharedidp-user#CX-Operator-users-0.json>"
+    serviceprovider: "<path:portal/data/iam/sharedidp-user#Service-Provider-users-0.json>"
+    appprovider: "<path:portal/data/iam/sharedidp-user#App-Provider-users-0.json>"

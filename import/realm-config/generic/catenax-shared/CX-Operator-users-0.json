@@ -1,8 +1,8 @@
 {
   "realm" : "CX-Operator",
   "users" : [ {
-    "id" : "17613bcb-ddcb-46b3-8679-9ae90ea6096f",
-    "username" : "cx-admin",
+    "id" : "656e8a94-188b-4a3e-9eec-b45d8efd8347",
+    "username" : "cx-operator@cx.com",
     "enabled" : true,
     "totp" : false,
     "emailVerified" : false,
