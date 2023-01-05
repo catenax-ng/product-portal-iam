@@ -1,11 +1,11 @@
 # Catena-X IAM: Keycloak instances
 
-This repository contains the reference configuration to deploy the Catena-X (CX) specific Keycloak instances.
+The cx-iam has been moved and this repository is now **deprecated**.
+You can find the code at the new location:
 
-The instances depend on the [helm chart from Bitnami](https://artifacthub.io/packages/helm/bitnami/keycloak/7.1.18) (chart version 7.1.18, app version 16.1.1).
+https://github.com/catenax-ng/tx-portal-iam
 
-The repository is split up in:
+If you want to check out previous versions of the code just open the according release version.
+The last state in main is the following:
 
-* The helm charts to deploy the CX Keycloak instances
-* The CX specific configuration (e.g. keycloak-themes and initial realm-config)
-* The dockerfile (Dockerfile.import) to build an image containing the CX specific configuration which is used as init container at Keycloak startup
+https://github.com/catenax-ng/product-portal-iam/releases/tag/move-to-tx-portal-iam
